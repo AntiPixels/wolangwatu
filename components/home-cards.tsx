@@ -1,33 +1,12 @@
+import { cardData } from "@/constant";
 import Link from "next/link";
 
-const cardData = [
-  {
-    id: 1,
-    img: "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-    title: "Quartz",
-    price: "Rp. 3.000.000",
-    source: "stones/quartz",
-  },
-  {
-    id: 2,
-    img: "https://daisyui.com/images/stock/photo-1580587771525-78bca66da95b.jpg",
-    title: "Tops!",
-    price: "Rp. 3.000.000",
-    source: "#",
-  },
-  {
-    id: 3,
-    img: "https://daisyui.com/images/stock/photo-1593642532842-ffada4a1afa6.jpg",
-    title: "Pants!",
-    price: "Rp. 3.000.000",
-    source: "#",
-  },
-];
+
 
 export default function HomeCards() {
   return (
     <section>
-      <h1 className="p-6 text-4xl">Top Picks 🔥</h1>
+      <h1 className="p-6 text-4xl bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">Top Picks 🔥</h1>
       {cardData.map((card) => (
         <Link href={card.source}>
           <div
@@ -37,10 +16,10 @@ export default function HomeCards() {
             <figure>
               <img src={card.img} alt={card.title} />
             </figure>
-            <div className="card-body">
+            <div className="card-body items-center mt-24 font-bold">
               <h2 className="card-title">{card.title}</h2>
               <p>{card.price}</p>
-              <div className="card-actions justify-end"></div>
+              <div className="card-actions "></div>
             </div>
           </div>
         </Link>

@@ -22,15 +22,18 @@ export default function Heading() {
       </div>
 
       <section className="p-6 text-2xl">
-        <Typewriter
-          options={{
-            strings: TEXT,
-            autoStart: true,
-            delay: 10,
-          }}
-        />
-        <div className="flex justify-center">
-          <button className="btn mt-2 ">🡣</button>
+        <div className="tracking-wide">
+          <Typewriter
+            options={{
+              strings: TEXT,
+              autoStart: true,
+              delay: 10,
+            }}
+          />
+        </div>
+
+        <div className="flex justify-center ">
+          <button className="btn btn-primary mt-6 font-bold ">Read More</button>
         </div>
       </section>
     </div>
